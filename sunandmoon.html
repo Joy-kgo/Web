@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunMoon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sun {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #FFEEA2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(64, 197, 124);
+            z-index: 10;
+            clip-path: inset(0px 50% 0px 0px);
+        }
+
+        .sun::after {
+            content: '';
+            display: block;
+            width: 600px;
+            height: 600px;
+            background-color: orange;
+            border-radius: 50%;
+
+        }
+
+        .sea {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 20%;
+            backdrop-filter: blur(100px);
+            -webkit-backdrop-filter: blur(100px);
+            z-index: 10;
+        }
+
+        .moon {
+            position: absolute;
+            background-color: #040720;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        #moont {
+            color: white;
+            padding: 10% 0%;
+        }
+
+
+        .moon::after {
+            content: '';
+            display: block;
+            width: 600px;
+            height: 600px;
+            box-shadow: 155px 155px 0px cyan;
+            border-radius: 50%;
+            transform: translate(-160px, -180px)
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            letter-spacing: -0.1rem;
+            /*字體間距*/
+            position: relative;
+        }
+
+        h1::after {
+            content: 'Play to hill heart';
+            color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-clip-path: ellipse(80px 80px at 0% 50%);
+            clip-path: ellipse(50px 50px at 0% 50%);
+            animation: spotlight 5s infinite;
+            background-color: rgba(10, 104, 99, 0.877);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        @keyframes spotlight {
+            0% {
+                -webkit-clip-path: ellipse(80px 80px at 0% 50%);
+                clip-path: ellipse(80px 80px at 0% 50%);
+            }
+
+            50% {
+                -webkit-clip-path: ellipse(80px 80px at 0% 50%);
+                clip-path: ellipse(80px 80px at 100% 50%);
+            }
+
+            100% {
+                -webkit-clip-path: ellipse(80px 80px at 0% 50%);
+                clip-path: ellipse(80px 80px at 0% 50%);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class='sun'>
+        <h1>Play to hill heart</h1>
+    </div>
+    <div class='moon'>
+        <h1 id="moont">Sleep to hill brain</h1>
+    </div>
+    <div class='sea'></div>
+
+    <script>           
+            window.addEventListener('mousemove', (e) => {
+                let percentage = (100 - e.clientX / window.innerWidth * 100);                
+                document.querySelector('.sun').style.clipPath =
+                    `inset(0px ${percentage}% 0px 0px)`;
+            })
+
+    </script>
+</body>
+
+</html>

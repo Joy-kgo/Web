@@ -1,0 +1,134 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{            
+    background-image: linear-gradient(120deg, #d1a6f8 0%, #69aef3 100% ,#3986d3 100%);
+}
+.box{
+    width:190px;
+    height:430px;
+    overflow: hidden;
+    position: fixed;
+    margin-left: 50px;
+    /* 背景渐变 */
+    /* background: -webkit-linear-gradient(#4491e9, rgb(37, 34, 184)); 
+    background: -o-linear-gradient(#4491e9, rgb(37, 34, 184));
+    background: -moz-linear-gradient(#4491e9,#362ea0);
+    background: linear-gradient(#4491e9,#362ea0); */
+    /* 边框及阴影 */
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    box-shadow: 0px 0px 1px 1px#362ea0;
+    border:1px solid rgb(105, 117, 224);
+}
+.v1{
+    width: 190px;
+    height: 590px;
+    background-color: #0961b3;
+    opacity: 0.5;
+    background-color: #3986d3;
+    opacity: 0.3;
+    position: absolute;
+    top: 150px;
+    animation:myfirst1 5s;
+    -moz-animation:myfirst1 5s; /* Firefox */
+    -webkit-animation:myfirst1 5s; /* Safari and Chrome */
+    -o-animation:myfirst1 5s; /* Opera */
+}
+@keyframes myfirst1 {
+    0% {top: 430px;}
+    25% {top: 300px;}
+    50% {top: 250px;}
+    100% {top: 150px;}
+}
+@-moz-keyframes myfirst1 /* Firefox */{
+    0% {top: 430px;}
+    25% {top: 300px;}
+    50% {top: 250px;}
+    100% {top: 150px;}
+}
+@-webkit-keyframes myfirst1 /* Safari and Chrome */{
+    0% {top: 430px;}
+    25% {top: 300px;}
+    50% {top: 250px;}
+    100% {top: 150px;}
+}
+@-o-keyframes myfirst1 /* Opera */{
+    0% {top: 430px;}
+    25% {top: 300px;}
+    50% {top: 250px;}
+    100% {top: 150px;}
+}
+.v2{
+    background-color:#362ea0;
+    transform: rotate(0deg);
+    -moz-animation:myfirst2 5s; /* Firefox */
+    -webkit-animation:myfirst2 5s; /* Safari and Chrome */
+    -o-animation:myfirst2 5s; /* Opera */
+    animation:myfirst2 5s;
+    -moz-animation-iteration-count:500;
+    -webkit-animation-iteration-count:500;
+    -o-animation-iteration-count:500;
+    animation-iteration-count:500;
+}
+@keyframes myfirst2 {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(-180deg);}
+    50% {transform: rotate(-360deg);}
+    75% {transform: rotate(-540deg);}
+    100% {transform: rotate(-720deg);}
+}
+@-moz-keyframes myfirst2 /* Firefox */{
+    0% {-moz-transform: rotate(0deg);}
+    25% {-moz-transform: rotate(-180deg);}
+    50% {-moz-transform: rotate(-360deg);}
+    75% {-moz-transform: rotate(-540deg);}
+    100% {-moz-transform: rotate(-720deg);}
+}
+@-webkit-keyframes myfirst2 /* Safari and Chrome */{
+    0% {-webkit-transform: rotate(0deg);}
+    25% {-webkit-transform: rotate(-180deg);}
+    50% {-webkit-transform: rotate(-360deg);}
+    75% {-webkit-transform: rotate(-540deg);}
+    100% {-webkit-transform: rotate(-720deg);}
+}
+@-o-keyframes myfirst2 /* Opera */{
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(-180deg);}
+    50% {transform: rotate(-360deg);}
+    75% {transform: rotate(-540deg);}
+    100% {transform: rotate(-720deg);}
+}
+/*  以上实现动作 下面开始样式修改，前面冲突、影响的样式会注释掉  */
+/* v2 中画不规则圆形 */
+.v2{
+    width: 390px;
+    height: 290px;
+    background:#3986d3;
+    border-color: #3986d3;
+    opacity: 1;
+    border-style: solid;
+    top: -80px;
+    left: -80px;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 100%;
+    position:absolute;
+}
+@font-face {
+    font-family: DFPiPiStd;
+    src: url(font/DFPiPiStd-W5A.otf);
+}
+pre {
+    text-align:center;
+    font-family: DFPiPiStd;
+}
+#ig{           
+   margin-left:0%;           
+   margin-top:2em;
+   opacity: 0.9;
+   size:100%;
+}
+
+h1 {
+    margin-top:1em;
+}
