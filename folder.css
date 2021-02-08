@@ -1,0 +1,121 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.tab, #tab4, #tab3, #tab2, #tab1, #tab0 {
+  height: 100%;
+  position: absolute;
+  box-shadow: 6px 0px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+.tab:hover ~ div, #tab4:hover ~ div, #tab3:hover ~ div, #tab2:hover ~ div, #tab1:hover ~ div, #tab0:hover ~ div {
+  transform: translateX(-80vw);
+}
+
+#tab0 {
+  width: 100vw;
+  background: #663b23;
+}
+
+#tab1 {
+  width: 95vw;
+  background: #ab7e50;
+  color:#f4cf99;
+  line-height: 3em;
+}
+#tab1::after {
+  content: "睡";
+  font-size: 2em;
+  text-align: center;
+  line-height: 120px;
+  position: absolute;
+  width: 5vw;
+  height: 25vh;
+  background: #ab7e50;
+  border-radius: 0 20px 20px 0;
+  top: 75%;
+  right: -4vw;
+}
+
+#tab2 {
+  width: 90vw;
+  background: #8badbb;
+  color:#c76749;
+  line-height: 3em;
+}
+#tab2::after {
+  content: "玩";
+  font-size: 2em;
+  text-align: center;
+  line-height: 120px;
+  position: absolute;
+  width: 5vw;
+  height: 25vh;
+  background: #8badbb;
+  border-radius: 0 20px 20px 0;
+  top: 50%;
+  right: -4vw;
+}
+
+#tab3 {
+  width: 85vw;
+  background: #f4cf99;
+  color:#8fa887;
+  line-height: 3em;
+}
+#tab3::after {
+  content: "喝";
+  font-size: 2em;
+  text-align: center;
+  line-height: 120px;
+  position: absolute;
+  width: 5vw;
+  height: 25vh;
+  background: #f4cf99;
+  border-radius: 0 20px 20px 0;
+  top: 25%;
+  right: -4vw;
+}
+
+#tab4 {
+  width: 80vw;
+  background: #f0eff0;
+  color:#d08f49;
+  line-height: 3em;
+}
+
+#tab4::after {
+  content: "吃";
+  font-size: 2em;
+  text-align: center;
+  line-height: 120px;
+  position: absolute;
+  width: 5vw;
+  height: 25vh;
+  background: #f0eff0;
+  border-radius: 0 20px 20px 0;
+  top: 0;
+  right: -4vw;
+}
+
+#tab4 table,#tab3 table,#tab2 table,#tab1 table{
+  margin-left:50%;
+  font-size: 2em;
+  text-align: center;
+  
+}
+
+#tab0 form{
+  margin-left:150px;
+  font-size: 2em;
+  text-align: center;
+  color:#ffffff;
+}
+
+#tab0 form fieldset{
+  border: 2px dashed #c97263;
+}
+
+/*# sourceMappingURL=folder.css.map */
